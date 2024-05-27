@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/main.css" rel="stylesheet" />
-    <title>Landing page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Manage Landing Page</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -13,31 +14,56 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="pt-2">
-          <img src="img/logo.svg" alt="logo" />
+          <img src="img/logo.svg" alt="" />
         </div>
-        <!-- Menu -->
-        <div class="hidden md:flex space-x-6">
+        <!-- Menu Items -->
+        <div class="hidden space-x-6 md:flex">
+          <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Product</a>
+          <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
+          <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+        </div>
+        <!-- Button -->
+        <a
+          href="#"
+          class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+        >
+          Get Started
+        </a>
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
           <a href="#">Pricing</a>
           <a href="#">Product</a>
           <a href="#">About Us</a>
           <a href="#">Careers</a>
           <a href="#">Community</a>
         </div>
-        <a
-          href="#"
-          class="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-          >Get Started</a
-        >
       </div>
     </nav>
 
-    <!-- Hero section -->
+    <!-- Hero Section -->
     <section id="hero">
-      <!-- Flex container -->
+      <!-- Flex Container -->
       <div
-        class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0"
+        class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
       >
-        <!-- Left -->
+        <!-- Left item -->
         <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
           <h1
             class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
@@ -56,19 +82,20 @@
             >
           </div>
         </div>
-        <!-- Right -->
+        <!-- Image -->
         <div class="md:w-1/2">
-          <img src="img/illustration-intro.svg" alt="hero-banner" />
+          <img src="img/illustration-intro.svg" alt="" />
         </div>
       </div>
     </section>
 
-    <!-- Features section -->
+    <!-- Features Section -->
     <section id="features">
+      <!-- Flex container -->
       <div
         class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
       >
-        <!-- What's different -->
+        <!-- What's Different -->
         <div class="flex flex-col space-y-12 md:w-1/2">
           <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
             What's different about Manage?
@@ -80,9 +107,9 @@
           </p>
         </div>
 
-        <!-- List -->
+        <!-- Numbered List -->
         <div class="flex flex-col space-y-8 md:w-1/2">
-          <!-- List item 1 -->
+          <!-- List Item 1 -->
           <div
             class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
           >
@@ -113,7 +140,7 @@
             </div>
           </div>
 
-          <!-- List item 2 -->
+          <!-- List Item 2 -->
           <div
             class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
           >
@@ -143,7 +170,7 @@
             </div>
           </div>
 
-          <!-- List item 3 -->
+          <!-- List Item 3 -->
           <div
             class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
           >
@@ -176,25 +203,22 @@
       </div>
     </section>
 
-    <!-- Testimonials section -->
+    <!-- Testimonials -->
     <section id="testimonials">
+      <!-- Container to heading and testm blocks -->
       <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
-        <!-- Heading-->
+        <!-- Heading -->
         <h2 class="text-4xl font-bold text-center">
-          What's different about Manage?
+          What's Different About Manage?
         </h2>
-        <!-- Testimonials container-->
+        <!-- Testimonials Container -->
         <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
           <!-- Testimonial 1 -->
           <div
             class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
           >
-            <img
-              src="img/avatar-anisha.png"
-              alt="avatar-anisha"
-              class="w-16 -mt-14"
-            />
-            <h5 class="font-bold text-lg">Anisha Li</h5>
+            <img src="img/avatar-anisha.png" class="w-16 -mt-14" alt="" />
+            <h5 class="text-lg font-bold">Anisha Li</h5>
             <p class="text-sm text-darkGrayishBlue">
               “Manage has supercharged our team’s workflow. The ability to
               maintain visibility on larger milestones at all times keeps
@@ -204,14 +228,10 @@
 
           <!-- Testimonial 2 -->
           <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
           >
-            <img
-              src="img/avatar-ali.png"
-              alt="avatar-anisha"
-              class="w-16 -mt-14"
-            />
-            <h5 class="font-bold text-lg">Anisha Li</h5>
+            <img src="img/avatar-ali.png" class="w-16 -mt-14" alt="" />
+            <h5 class="text-lg font-bold">Ali Bravo</h5>
             <p class="text-sm text-darkGrayishBlue">
               “We have been able to cancel so many other subscriptions since
               using Manage. There is no more cross-channel confusion and
@@ -221,14 +241,10 @@
 
           <!-- Testimonial 3 -->
           <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
           >
-            <img
-              src="img/avatar-richard.png"
-              alt="avatar-anisha"
-              class="w-16 -mt-14"
-            />
-            <h5 class="font-bold text-lg">Richard Watts</h5>
+            <img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
+            <h5 class="text-lg font-bold">Richard Watts</h5>
             <p class="text-sm text-darkGrayishBlue">
               “Manage has supercharged our team’s workflow. The ability to
               maintain visibility on larger milestones at all times keeps
@@ -236,36 +252,39 @@
             </p>
           </div>
         </div>
-
         <!-- Button -->
         <div class="my-16">
           <a
             href="#"
             class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-            >Get Started</a
           >
+            Get Started
+          </a>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
     <section id="cta" class="bg-brightRed">
-      <!-- Flex container -->
+      <!-- Flex Container -->
       <div
         class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
       >
         <!-- Heading -->
-        <div
+        <h2
           class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
         >
           Simplify how your team works today
-        </div>
+        </h2>
         <!-- Button -->
-        <a
-          href="#"
-          class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
-          >Get Started</a
-        >
+        <div>
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+          >
+            Get Started
+          </a>
+        </div>
       </div>
     </section>
 
@@ -310,7 +329,6 @@
             </a>
           </div>
         </div>
-
         <!-- List Container -->
         <div class="flex justify-around space-x-32">
           <div class="flex flex-col space-y-3 text-white">
@@ -348,5 +366,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
